@@ -231,6 +231,10 @@ a, button {
   animation: slide-in 1s ease-out;
 }
 
+.sub {
+  font-size: clamp(1.4rem, 8vw, 3.5rem);
+} 
+
 .hero-tagline {
   font-size: clamp(1rem, 3vw, 1.25rem);
   color: var(--secondary-text);
