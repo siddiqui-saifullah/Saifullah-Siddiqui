@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Case Study: Weather Now | Saifullah Siddiqui</title>
     <meta name="description" content="A real-time weather tracking application built by Saifullah Siddiqui using React, Vite, Material UI, and OpenWeatherMap API.">
-    <link rel="canonical" href="https://saifullahsiddiqui.com/projects/weather-now.html">
+    <link rel="canonical" href="https://saifullahsiddiqui.com/projects/weather-now">
     <meta name="author" content="Saifullah Siddiqui">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Project Case Study: Weather Now | Saifullah Siddiqui">
     <meta property="og:description" content="A responsive weather dashboard featuring geolocation, dual-API integration, and a modern Material UI design.">
     <meta property="og:image" content="https://saifullahsiddiqui.com/assets/images/project-weather.webp">
-    <meta property="og:url" content="https://saifullahsiddiqui.com/projects/weather-now.html">
+    <meta property="og:url" content="https://saifullahsiddiqui.com/projects/weather-now">
     <meta property="og:site_name" content="Saifullah Siddiqui's Portfolio">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -54,19 +54,43 @@
       "programmingLanguage": ["JavaScript", "React", "Vite"]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saifullahsiddiqui.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://saifullahsiddiqui.com/projects" },
+        { "@type": "ListItem", "position": 3, "name": "Weather Now", "item": "https://saifullahsiddiqui.com/projects/weather-now" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="cursor-dot" aria-hidden="true"></div>
     <div class="cursor-glow" aria-hidden="true"></div>
 
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <header class="main-header">
         <div class="header-content">
             <a href="/" class="logo">Saifullah Siddiqui</a>
+            <nav class="main-nav" aria-label="Primary">
+                <a href="/#about">About</a>
+                <a href="/projects">Work</a>
+                <a href="/#building">Building</a>
+                <a href="/#contact">Contact</a>
+            </nav>
             <a href="/#contact" class="contact-btn">Get in Touch</a>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> <span aria-hidden="true">/</span>
+            <a href="/projects">Projects</a> <span aria-hidden="true">/</span>
+            <span aria-current="page">Weather Now</span>
+        </nav>
         <header class="project-hero">
             <h1>Weather Now</h1>
             <p class="subtitle">A lightning-fast weather dashboard built with React and Material UI, delivering real-time climatic data through a clean, responsive interface.</p>
@@ -81,7 +105,8 @@
         </header>
 
         <section class="project-image-container">
-            <img src="../assets/images/project-weather.webp" alt="A screenshot of the Weather Now application interface.">
+            <img src="../assets/images/project-weather.webp" alt="A screenshot of the Weather Now application interface."
+                 width="1920" height="1080" loading="lazy">
         </section>
 
         <section class="project-section" id="overview">
@@ -185,7 +210,7 @@ const handleGetWeather = async(city) => {
             <a href="https://www.linkedin.com/in/siddiqui-saifullah" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://instagram.com/hey.itsaif" target="_blank" rel="noopener">Instagram</a>
         </div>
-        <p>&copy; 2025 Saifullah Siddiqui. All rights reserved.</p>
+        <p>&copy; 2026 Saifullah Siddiqui</p>
     </footer>
 
     <script src="../assets/js/script.js"></script>

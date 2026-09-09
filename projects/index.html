@@ -5,93 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Projects | Saifullah Siddiqui</title>
-    <meta name="description" content="Explore a collection of web development projects by Saifullah Siddiqui, showcasing skills in Node.js, Express, JavaScript, and more.">
+    <meta name="description" content="Selected full-stack, AI and web engineering projects by Saifullah Siddiqui, including Aivex, Ventara, Weather Now and University Finder.">
     <link rel="canonical" href="https://saifullahsiddiqui.com/projects">
     <meta name="author" content="Saifullah Siddiqui">
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects | Saifullah Siddiqui">
+    <meta property="og:description" content="Selected full-stack, AI and web engineering projects by Saifullah Siddiqui.">
+    <meta property="og:image" content="https://saifullahsiddiqui.com/og-image-info.jpg">
+    <meta property="og:url" content="https://saifullahsiddiqui.com/projects">
+    <meta property="og:site_name" content="Saifullah Siddiqui">
+    <meta name="theme-color" content="#050505">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" defer></script>
-    
     <link rel="stylesheet" href="../assets/css/projects.css">
 
     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
         {
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "MERN Stack & Java Projects | Saifullah Siddiqui's Portfolio",
-            "url": "https://saifullahsiddiqui.com/projects",
-            "mainEntity": {
-                "@type": "Person",
-                "name": "Saifullah Siddiqui",
-                "url": "https://saifullahsiddiqui.com",
-                "sameAs": [
-                "https://github.com/siddiqui-saifullah",
-                "https://www.linkedin.com/in/siddiqui-saifullah",
-                "https://instagram.com/hey.itsaif"
-                ],
-                "jobTitle": "Full Stack Developer"
-            }
+          "@type": "CollectionPage",
+          "name": "Projects | Saifullah Siddiqui",
+          "url": "https://saifullahsiddiqui.com/projects",
+          "about": { "@id": "https://saifullahsiddiqui.com/#person" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saifullahsiddiqui.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://saifullahsiddiqui.com/projects" }
+          ]
         }
+      ]
+    }
     </script>
 </head>
 <body>
     <div class="cursor-dot" aria-hidden="true"></div>
     <div class="cursor-glow" aria-hidden="true"></div>
 
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <header class="main-header">
         <div class="container">
             <a href="/" class="logo">Saifullah Siddiqui</a>
+            <nav class="main-nav" aria-label="Primary">
+                <a href="/#about">About</a>
+                <a href="/projects">Work</a>
+                <a href="/#building">Building</a>
+                <a href="/#contact">Contact</a>
+            </nav>
             <a href="/#contact" class="contact-btn">Get in Touch</a>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="main">
         <header class="page-hero">
-            <h1>My Work & Projects</h1>
-            <p>A selection of projects that highlight my skills in web development, problem-solving, and creating user-friendly digital experiences.</p>
+            <h1>Projects</h1>
+            <p>Selected full-stack, AI and web engineering work — from a browser-based development platform to full-stack applications and focused experiments.</p>
         </header>
 
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Projects</span>
+        </nav>
+
+        <h2 class="group-title">Flagship</h2>
+        <div class="projects-grid">
+            <div class="project-card is-flagship">
+                <img src="../assets/images/project-aivex.webp" alt="Aivex browser-based development platform preview"
+                     width="1920" height="1080" loading="lazy">
+                <div class="card-content">
+                    <h3>Aivex</h3>
+                    <p>AI-powered browser-based development platform. Create, collaborate and interact with projects in the browser — real-time chat, WebContainer execution, JWT + Redis auth, and an integrated Gemini AI assistant, on a MERN architecture.</p>
+                    <p class="card-stack">MERN • Socket.io • WebContainers • Redis • JWT • Gemini AI</p>
+                    <div class="card-buttons">
+                        <a href="/projects/aivex" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
+                        <a href="https://aivex.in/" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="external-link"></i> Live</a>
+                        <a href="https://github.com/siddiqui-saifullah/Aivex" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="group-title">Full-stack &amp; web engineering</h2>
         <div class="projects-grid">
 
             <div class="project-card">
-                <img src="https://placehold.co/600x400/111111/888888?text=Coming+Soon" alt="Upcoming Project: Ventara">
-                <div class="card-content">
-                    <h3>Hive</h3>
-                    <p>An exciting new project currently in development. More details will be revealed soon. Stay tuned!</p>
-                    <div class="card-buttons">
-                        <a class="btn btn-primary disabled"><i data-feather="file-text"></i> Case Study</a>
-                        <a class="btn btn-secondary disabled"><i data-feather="external-link"></i> Live</a>
-                        <a class="btn btn-secondary disabled"><i data-feather="github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="../assets/images/project-ventara.webp" alt="Ventara project preview">
+                <img src="../assets/images/project-ventara.webp" alt="Ventara accommodation platform preview" loading="lazy">
                 <div class="card-content">
                     <h3>Ventara</h3>
-                    <p>A full-stack Airbnb-inspired platform with authentication, image uploads, and Mapbox integration.</p>
+                    <p>Full-stack accommodation platform with Passport.js authentication, Cloudinary image uploads, Joi validation, fuzzy search and Mapbox location integration.</p>
+                    <p class="card-stack">Node.js • Express • MongoDB • Cloudinary • Mapbox</p>
                     <div class="card-buttons">
-                        <a href="./projects/ventara.html" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
+                        <a href="/projects/ventara" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
                         <a href="https://ventara-5wuv.onrender.com" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="external-link"></i> Live</a>
-                        <a href="https://github.com/siddiqui-saifullah/ventara" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="github"></i> Code</a>
+                        <a href="https://github.com/siddiqui-saifullah/Ventara" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="github"></i> Code</a>
                     </div>
                 </div>
             </div>
 
-
             <div class="project-card">
-                <img src="../assets/images/project-weather.webp" alt="Ventara project preview">
+                <img src="../assets/images/project-weather.webp" alt="Weather Now dashboard preview" width="1920" height="1080" loading="lazy">
                 <div class="card-content">
-                    <h3>Weather-Now</h3>
-                    <p>A sleek, single-page application (SPA) designed to provide instant weather updates for any location globally.</p>
+                    <h3>Weather Now</h3>
+                    <p>React single-page app with auto-geolocation and chained geocoding + weather API requests, built on Vite and Material UI.</p>
+                    <p class="card-stack">React • Vite • Material UI • OpenWeatherMap API</p>
                     <div class="card-buttons">
-                        <a href="./projects/weatherNow.html" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
+                        <a href="/projects/weather-now" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
                         <a href="https://weather-now-here.vercel.app/" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="external-link"></i> Live</a>
                         <a href="https://github.com/siddiqui-saifullah/weather-app" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="github"></i> Code</a>
                     </div>
@@ -99,38 +126,45 @@
             </div>
 
             <div class="project-card">
-                <img src="../assets/images/project-instagram.webp" alt="Instagram Profile Viewer project preview">
-                <div class="card-content">
-                    <h3>Instagram Profile Viewer</h3>
-                    <p>A server-side rendered tool using Node.js and EJS to fetch and display profile data from an external API.</p>
-                    <div class="card-buttons">
-                        <a href="./projects/intagram-profile-viewer.html" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
-                        <a href="https://instagram-profile-viewer-oubw.onrender.com/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Live</a>
-                        <a href="https://github.com/siddiqui-saifullah/Instagram-Profile-Viewer/tree/for-source" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <img src="../assets/images/project-university.webp" alt="University Finder project preview">
+                <img src="../assets/images/project-university.webp" alt="University Finder search app preview" loading="lazy">
                 <div class="card-content">
                     <h3>University Finder</h3>
-                    <p>An intuitive search app built with API integration to find details about universities worldwide.</p>
+                    <p>Search application built on API integration to look up universities worldwide by name and country.</p>
+                    <p class="card-stack">JavaScript • REST API integration</p>
                     <div class="card-buttons">
-                        <a href="./projects/university-finder.html" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
+                        <a href="/projects/university-finder" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
                         <a href="http://saifullahsiddique.gt.tc/UniversityFinder/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Live</a>
                         <a href="https://github.com/siddiqui-saifullah/University-Finder" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="github"></i> Code</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="project-card">
-                <img src="../assets/images/project-simon.webp" alt="Simon Says Game project preview">
+                <img src="../assets/images/project-instagram.webp" alt="Instagram Profile Viewer preview" loading="lazy">
                 <div class="card-content">
-                    <h3>Simon Says Game</h3>
-                    <p>A classic memory game created with vanilla JavaScript to showcase DOM manipulation and game logic.</p>
+                    <h3>Instagram Profile Viewer</h3>
+                    <p>Server-side rendered tool using Node.js and EJS to fetch and display public profile data from an external API.</p>
+                    <p class="card-stack">Node.js • Express • EJS</p>
                     <div class="card-buttons">
-                        <a href="./projects/symon-say-game.html" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
+                        <a href="/projects/instagram-profile-viewer" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
+                        <a href="https://instagram-profile-viewer-oubw.onrender.com/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Live</a>
+                        <a href="https://github.com/siddiqui-saifullah/Instagram-Profile-Viewer/tree/for-source" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="group-title">Experiments &amp; fundamentals</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="../assets/images/project-simon.webp" alt="Simon Says game preview" loading="lazy">
+                <div class="card-content">
+                    <h3>Simon Says</h3>
+                    <p>Classic memory game in vanilla JavaScript — DOM manipulation, event handling and game-state logic.</p>
+                    <p class="card-stack">HTML • CSS • JavaScript</p>
+                    <div class="card-buttons">
+                        <a href="/projects/symon-say-game" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
                         <a href="https://symon-says-six.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Live</a>
                         <a href="https://github.com/siddiqui-saifullah/Symon-Says" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="github"></i> Code</a>
                     </div>
@@ -138,31 +172,44 @@
             </div>
 
             <div class="project-card">
-                <img src="../assets/images/project-spotify.webp" alt="Spotify Clone project preview">
+                <img src="../assets/images/project-TicTac.webp" alt="Tic-Tac-Toe game board preview" loading="lazy">
                 <div class="card-content">
-                    <h3>Spotify Clone</h3>
-                    <p>A pixel-perfect static clone of the Spotify UI, focusing purely on advanced HTML and CSS layout techniques.</p>
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>Responsive implementation of the classic game with win detection and a reset option.</p>
+                    <p class="card-stack">HTML • CSS • JavaScript</p>
                     <div class="card-buttons">
-                        <a href="./projects/spotify-clone.html" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
-                        <a href="https://spotify-clone-safullah-siddiqui.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Live</a>
-                        <a href="https://github.com/siddiqui-saifullah/Spotify-clone" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="../assets/images/project-TicTac.webp" alt="A screenshot of a clean Tic-Tac-Toe game board">
-                <div class="card-content">
-                    <h3>Tic-Tac-Toe Game</h3>
-                    <p>A clean and responsive implementation of the classic Tic-Tac-Toe game. Built with modern JavaScript, it features win detection and a reset option for endless fun.</p>
-                    <div class="card-buttons">
-                        <a href="./projects/tic-tac-toe.html" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
+                        <a href="/projects/tic-tac-toe" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
                         <a href="https://tic-tac-toe-gamee-one.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Live</a>
                         <a href="https://github.com/siddiqui-saifullah/TicTacToe" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="github"></i> Code</a>
                     </div>
                 </div>
             </div>
+
+            <div class="project-card">
+                <img src="../assets/images/project-spotify.webp" alt="Spotify UI clone preview" loading="lazy">
+                <div class="card-content">
+                    <h3>Spotify Clone</h3>
+                    <p>Static clone of the Spotify UI, focused on advanced HTML and CSS layout techniques.</p>
+                    <p class="card-stack">HTML • CSS</p>
+                    <div class="card-buttons">
+                        <a href="/projects/spotify-clone" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
+                        <a href="https://spotify-clone-safullah-siddiqui.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Live</a>
+                        <a href="https://github.com/siddiqui-saifullah/Spotify-clone" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <aside class="ecosystem-callout">
+            <div>
+                <h2>Building: the Grawity ecosystem</h2>
+                <p>Alongside portfolio projects, I'm building <strong>Grawity</strong>, an education-technology initiative, with <strong>GIMS</strong> (Grawity Institute Management System) as a live product. These are separate properties.</p>
+            </div>
+            <div class="ecosystem-callout-links">
+                <a href="https://www.grawity.in/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Grawity</a>
+                <a href="https://gims.grawity.in/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> GIMS</a>
+            </div>
+        </aside>
     </main>
 
     <div class="final-link">
@@ -178,7 +225,7 @@
             <a href="https://www.linkedin.com/in/siddiqui-saifullah" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://instagram.com/hey.itsaif" target="_blank" rel="noopener">Instagram</a>
         </div>
-        <p>&copy; 2025 Saifullah Siddiqui. All rights reserved.</p>
+        <p>&copy; 2026 Saifullah Siddiqui</p>
     </footer>
 
     <script src="../assets/js/script.js"></script>

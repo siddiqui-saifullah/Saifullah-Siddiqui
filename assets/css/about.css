@@ -1,0 +1,53 @@
+/* ==========================================================================
+   ABOUT PAGE — supplements globalproject.css
+   ========================================================================== */
+
+.about-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.about-focus-grid > div {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.about-focus-grid h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    margin-bottom: 0.4rem;
+}
+
+.about-focus-grid p {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 0;
+}
+
+.muted {
+    font-size: 0.85rem !important;
+    opacity: 0.8;
+}
+
+/* Content links — make them clearly links, not grey body text */
+.project-section p a,
+.project-section li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(20, 184, 166, 0.35);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+.project-section p a:hover,
+.project-section li a:hover {
+    color: #2dd4bf;
+    border-bottom-color: #2dd4bf;
+}
+
+#contact .cta-group {
+    justify-content: flex-start;
+}

@@ -7,7 +7,7 @@
     <!-- SEO Meta Tags -->
     <title>Project Case Study: Simon Says Game | Saifullah Siddiqui</title>
     <meta name="description" content="An in-depth look at the Simon Says game built by Saifullah Siddiqui, highlighting JavaScript game logic, DOM manipulation, and event handling.">
-    <link rel="canonical" href="https://saifullahsiddiqui.com/projects/simon-says-game">
+    <link rel="canonical" href="https://saifullahsiddiqui.com/projects/symon-say-game">
     <meta name="author" content="Saifullah Siddiqui">
 
     <!-- Open Graph / Facebook -->
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Project Case Study: Simon Says Game by Saifullah Siddiqui">
     <meta property="og:description" content="See the JavaScript logic behind this classic memory game built by Saifullah Siddiqui.">
     <meta property="og:image" content="https://saifullahsiddiqui.com/assets/images/project-simon.webp">
-    <meta property="og:url" content="https://saifullahsiddiqui.com/projects/simon-says-game">
+    <meta property="og:url" content="https://saifullahsiddiqui.com/projects/symon-say-game">
     <meta property="og:site_name" content="Saifullah Siddiqui's Portfolio">
 
     <!-- Twitter Card -->
@@ -63,21 +63,45 @@
       "image": "https://saifullahsiddiqui.com/assets/images/project-simon.webp"
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saifullahsiddiqui.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://saifullahsiddiqui.com/projects" },
+        { "@type": "ListItem", "position": 3, "name": "Simon Says", "item": "https://saifullahsiddiqui.com/projects/symon-say-game" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Custom Cursor -->
     <div class="cursor-dot" aria-hidden="true"></div>
     <div class="cursor-glow" aria-hidden="true"></div>
 
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Main Header -->
     <header class="main-header">
         <div class="header-content">
             <a href="/" class="logo">Saifullah Siddiqui</a>
+            <nav class="main-nav" aria-label="Primary">
+                <a href="/#about">About</a>
+                <a href="/projects">Work</a>
+                <a href="/#building">Building</a>
+                <a href="/#contact">Contact</a>
+            </nav>
             <a href="/#contact" class="contact-btn">Get in Touch</a>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> <span aria-hidden="true">/</span>
+            <a href="/projects">Projects</a> <span aria-hidden="true">/</span>
+            <span aria-current="page">Simon Says</span>
+        </nav>
         <header class="project-hero">
             <h1>Simon Says Game</h1>
             <p class="subtitle">A classic memory game built with vanilla JavaScript to test and showcase fundamental game development logic.</p>
@@ -195,7 +219,7 @@ function checkAns(currentIndex) {
             <a href="https://www.linkedin.com/in/siddiqui-saifullah" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://instagram.com/hey.itsaif" target="_blank" rel="noopener">Instagram</a>
         </div>
-        <p>&copy; 2025 Saifullah Siddiqui. All rights reserved.</p>
+        <p>&copy; 2026 Saifullah Siddiqui</p>
     </footer>
 
     <!-- Main JS file for cursor and header effects -->

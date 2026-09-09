@@ -24,12 +24,12 @@
     <meta name="twitter:description" content="A deep dive into a server-side rendered application built with Node.js, Express, and EJS.">
     <meta name="twitter:image" content="https://saifullahsiddiqui.com/assets/images/project-instagram.webp">
 
-    <!-- Favicon Links (pointing to root) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-    <link rel="manifest" href="../site.webmanifest">
-    <link rel="icon" href="../favicon.ico">
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <!-- Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" defer></script>
@@ -55,21 +55,45 @@
       "image": "https://saifullahsiddiqui.com/assets/images/project-instagram.webp"
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saifullahsiddiqui.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://saifullahsiddiqui.com/projects" },
+        { "@type": "ListItem", "position": 3, "name": "Instagram Profile Viewer", "item": "https://saifullahsiddiqui.com/projects/instagram-profile-viewer" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Custom Cursor -->
     <div class="cursor-dot" aria-hidden="true"></div>
     <div class="cursor-glow" aria-hidden="true"></div>
 
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Main Header -->
     <header class="main-header">
         <div class="header-content">
             <a href="/" class="logo">Saifullah Siddiqui</a>
+            <nav class="main-nav" aria-label="Primary">
+                <a href="/#about">About</a>
+                <a href="/projects">Work</a>
+                <a href="/#building">Building</a>
+                <a href="/#contact">Contact</a>
+            </nav>
             <a href="/#contact" class="contact-btn">Get in Touch</a>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> <span aria-hidden="true">/</span>
+            <a href="/projects">Projects</a> <span aria-hidden="true">/</span>
+            <span aria-current="page">Instagram Profile Viewer</span>
+        </nav>
         <header class="project-hero">
             <h1>Instagram Profile Viewer</h1>
             <p class="subtitle">A server-side rendered application designed to fetch and display public Instagram profile data via an external API.</p>
@@ -135,7 +159,7 @@
             <a href="https://www.linkedin.com/in/siddiqui-saifullah" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://instagram.com/hey.itsaif" target="_blank" rel="noopener">Instagram</a>
         </div>
-        <p>&copy; 2025 Saifullah Siddiqui. All rights reserved.</p>
+        <p>&copy; 2026 Saifullah Siddiqui</p>
     </footer>
 
     <!-- Main JS file for cursor and header effects -->

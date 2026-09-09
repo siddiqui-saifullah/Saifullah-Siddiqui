@@ -1,5 +1,5 @@
 /* --- Root Variables & Global Styles (from main theme) --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display.swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
     --bg-color: #050505;
@@ -290,3 +290,111 @@ main.container {
     cursor: not-allowed;
     pointer-events: none;
 }
+
+/* --- Skip link --- */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    z-index: 1000;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    border-radius: 0 0 0.5rem 0;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+/* --- Header nav --- */
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+}
+.main-nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--secondary-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.main-nav a:hover { color: var(--primary-text); }
+
+@media (max-width: 820px) {
+    .main-nav { display: none; }
+}
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    margin-bottom: 2.5rem;
+}
+.breadcrumb a { color: var(--secondary-text); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent-color); }
+.breadcrumb span[aria-current] { color: var(--primary-text); }
+
+/* --- Project group headings --- */
+.group-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+    margin: 3.5rem 0 1.5rem;
+}
+.group-title:first-of-type { margin-top: 0; }
+
+/* --- Card stack line --- */
+.card-stack {
+    font-size: 0.8rem !important;
+    color: var(--secondary-text);
+    opacity: 0.85;
+    margin-bottom: 1.25rem !important;
+    flex-grow: 0 !important;
+}
+
+/* --- Flagship card spans full width --- */
+.project-card.is-flagship {
+    grid-column: 1 / -1;
+}
+@media (min-width: 800px) {
+    .project-card.is-flagship {
+        flex-direction: row;
+    }
+    .project-card.is-flagship img {
+        width: 45%;
+        height: auto;
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+    }
+}
+
+/* --- Image fallback when a screenshot is missing --- */
+.project-card img.img-fallback {
+    background: linear-gradient(135deg, #0d1a19, #0a0a0a);
+    object-fit: contain;
+}
+
+/* --- Grawity ecosystem callout --- */
+.ecosystem-callout {
+    margin-top: 4rem;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #161616, #111111);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.ecosystem-callout h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.ecosystem-callout p { color: var(--secondary-text); max-width: 60ch; }
+.ecosystem-callout-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
