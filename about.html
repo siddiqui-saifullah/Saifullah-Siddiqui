@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About Saifullah Siddiqui | Full-Stack Developer</title>
-    <meta name="description" content="Professional background, engineering focus and current products of Saifullah Siddiqui — a full-stack developer working in the JavaScript / MERN ecosystem, building Aivex and the Grawity ecosystem.">
+    <meta name="description" content="Background, engineering focus and current products of Saifullah Siddiqui — a full-stack developer working with TypeScript and the MERN stack, creator of Aivex and builder of the Grawity platform (GIMS, Grawity Classroom).">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://saifullahsiddiqui.com/about">
     <meta name="author" content="Saifullah Siddiqui">
 
@@ -17,7 +18,8 @@
     <meta property="og:site_name" content="Saifullah Siddiqui">
     <meta name="theme-color" content="#050505">
 
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@iamsiddiquisaif">
     <meta name="twitter:title" content="About Saifullah Siddiqui | Full-Stack Developer">
     <meta name="twitter:description" content="Professional background, engineering focus and current products of Saifullah Siddiqui.">
     <meta name="twitter:image" content="https://saifullahsiddiqui.com/og-image-info.jpg">
@@ -29,7 +31,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="apple-mobile-web-app-title" content="Saifullah Siddiqui" />
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js" defer></script>
     <link rel="stylesheet" href="./assets/css/globalproject.css">
     <link rel="stylesheet" href="./assets/css/about.css">
 
@@ -46,11 +48,17 @@
           "@type": "Person",
           "@id": "https://saifullahsiddiqui.com/#person",
           "name": "Saifullah Siddiqui",
+          "alternateName": "Saifullah Siddique",
           "url": "https://saifullahsiddiqui.com/",
+          "image": "https://saifullahsiddiqui.com/assets/images/saifullahsiddiqui.webp",
+          "email": "mailto:saifullahshasiddiqui@gmail.com",
           "jobTitle": "Full-Stack Developer",
+          "alumniOf": { "@type": "CollegeOrUniversity", "name": "Jamia Hamdard", "sameAs": "https://jamiahamdard.edu/" },
           "knowsAbout": [
             "Full-Stack Web Development",
+            "TypeScript",
             "MERN Stack",
+            "Multi-tenant SaaS Architecture",
             "Node.js",
             "React",
             "MongoDB",
@@ -62,6 +70,7 @@
           ],
           "sameAs": [
             "https://github.com/siddiqui-saifullah",
+            "https://saifullahsiddiqui.com/about",
             "https://www.linkedin.com/in/siddiqui-saifullah",
             "https://x.com/iamsiddiquisaif",
             "https://instagram.com/hey.itsaif"
@@ -105,12 +114,12 @@
 
         <header class="project-hero">
             <h1>About</h1>
-            <p class="subtitle">Full-Stack Developer working in the JavaScript / MERN ecosystem — building web applications, backend systems, real-time features and AI-powered tools.</p>
+            <p class="subtitle">Full-Stack Developer working with TypeScript and the MERN stack — building web applications, backend systems, real-time features and AI-powered tools.</p>
         </header>
 
         <section class="project-section" id="profile">
             <h2>Profile</h2>
-            <p>I'm Saifullah Siddiqui, a full-stack developer focused on building practical web applications, backend systems, real-time features and AI-powered tools. I work primarily with the JavaScript / MERN ecosystem — React, Node.js, Express and MongoDB — and use Java for data structures, algorithms and problem solving.</p>
+            <p>I'm Saifullah Siddiqui, a full-stack developer focused on building practical web applications, backend systems, real-time features and AI-powered tools. I work primarily with TypeScript and the MERN stack — React, Node.js, Express and MongoDB — and use Java for data structures, algorithms and problem solving.</p>
             <p>My interest is in the whole path from an idea to a deployed, maintainable product: designing the data model, building the API, handling authentication and real-time state, and shipping a frontend that is fast and accessible.</p>
         </section>
 
@@ -118,18 +127,20 @@
             <h2>What I'm Building</h2>
             <ul class="feature-list">
                 <li><strong>Aivex</strong> — an AI-powered browser-based development platform on a MERN architecture, with real-time collaboration (Socket.io), in-browser execution (WebContainers), Redis-backed JWT authentication and a Google Gemini AI assistant. <a href="/projects/aivex">Read the case study</a>.</li>
-                <li><strong>Grawity</strong> — an education-technology initiative focused on practical computer education and digital learning. <a href="https://www.grawity.in/" target="_blank" rel="noopener">grawity.in</a>.</li>
-                <li><strong>GIMS</strong> — the Grawity Institute Management System, a live Grawity product for everyday institute operations. <a href="https://gims.grawity.in/" target="_blank" rel="noopener">gims.grawity.in</a>.</li>
+                <li><strong>Grawity</strong> — multi-tenant software that replaces the spreadsheets and paper registers coaching institutes run on, with every institute in its own isolated workspace. TypeScript end to end, on React, Node.js / Express and MongoDB. <a href="https://www.grawity.in/" target="_blank" rel="noopener">grawity.in</a>.</li>
+                <li><strong>GIMS</strong> — the Grawity Institute Management System, a live product covering students, batches, admissions, attendance, fees, exams and reporting. <a href="https://gims.grawity.in/" target="_blank" rel="noopener">gims.grawity.in</a>.</li>
+                <li><strong>Grawity Classroom</strong> — the learning layer: courses and lessons, assignments, auto-graded tests, progress and certificates, with AI-assisted lesson authoring and grading that a teacher always reviews. Its own backend and database, synced with GIMS over service APIs. <a href="https://classroom.grawity.in/" target="_blank" rel="noopener">classroom.grawity.in</a>.</li>
+                <li><strong>Grawity ID</strong> — central identity and single sign-on across every Grawity product.</li>
             </ul>
-            <p class="muted">Grawity and GIMS are separate properties, linked here for reference.</p>
+            <p class="muted">Grawity products are separate properties, linked here for reference.</p>
         </section>
 
         <section class="project-section" id="focus">
             <h2>Engineering Focus</h2>
             <div class="about-focus-grid">
-                <div><h3>Full-Stack Web</h3><p>React, Node.js, Express, MongoDB, REST APIs</p></div>
-                <div><h3>Backend &amp; Systems</h3><p>Authentication, JWT, Redis, WebSockets / Socket.io, service architecture</p></div>
-                <div><h3>AI &amp; Developer Tools</h3><p>Gemini API, AI-assisted development, WebContainers</p></div>
+                <div><h3>Full-Stack Web</h3><p>TypeScript, React, Node.js, Express, MongoDB, REST APIs</p></div>
+                <div><h3>Backend &amp; Systems</h3><p>Multi-tenant architecture, SSO &amp; JWT auth, Redis, WebSockets / Socket.io, service-to-service APIs</p></div>
+                <div><h3>AI &amp; Developer Tools</h3><p>LLM integration (Gemini API), AI-assisted authoring &amp; grading, WebContainers</p></div>
                 <div><h3>Frontend</h3><p>HTML, CSS, JavaScript, React, Tailwind</p></div>
                 <div><h3>Problem Solving</h3><p>Java, Data Structures &amp; Algorithms</p></div>
                 <div><h3>Tools &amp; Deployment</h3><p>Git, GitHub, Postman, Vercel, Render, Linux</p></div>
@@ -141,6 +152,7 @@
             <ul class="feature-list">
                 <li><strong><a href="/projects/aivex">Aivex</a></strong> — AI-powered browser-based development platform (MERN, Socket.io, WebContainers, Redis, Gemini).</li>
                 <li><strong><a href="/projects/ventara">Ventara</a></strong> — full-stack accommodation platform with Passport.js auth, Cloudinary uploads, Joi validation and Mapbox integration.</li>
+                <li><strong><a href="https://github.com/siddiqui-saifullah/Micro-Marketplace" target="_blank" rel="noopener">Micro-Marketplace</a></strong> — marketplace with a modular Express 5 REST API (JWT auth, Multer uploads, pagination, favorites) and a React 19 client.</li>
                 <li><strong><a href="/projects/weather-now">Weather Now</a></strong> — React SPA with geolocation and chained geocoding + weather API requests.</li>
                 <li><strong><a href="/projects/university-finder">University Finder</a></strong> — API-driven university search.</li>
                 <li><a href="/projects">See all projects →</a></li>

@@ -431,9 +431,16 @@ a, button { cursor: pointer; color: inherit; text-decoration: none; }
   max-width: 44ch;
 }
 
-.building-product {
+.building-products {
+  list-style: none;
   padding-left: 3.5rem;
   border-left: 1px solid var(--border-color);
+  display: grid;
+  gap: 1.75rem;
+}
+.building-product + .building-product {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-color);
 }
 .building-tag {
   font-size: 0.72rem;
@@ -444,7 +451,7 @@ a, button { cursor: pointer; color: inherit; text-decoration: none; }
   margin-bottom: 0.6rem;
 }
 .building-product h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: var(--fw-bold);
   letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
@@ -452,8 +459,10 @@ a, button { cursor: pointer; color: inherit; text-decoration: none; }
 .building-product p {
   color: var(--secondary-text);
   font-size: 0.92rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
+.building-product p:last-child { margin-bottom: 0; }
+.building-lead .stack-line { margin: -0.75rem 0 1.75rem; }
 
 .ecosystem-note {
   margin-top: 1.5rem;
@@ -675,7 +684,7 @@ a, button { cursor: pointer; color: inherit; text-decoration: none; }
   :root { --section-padding: 6.5rem; }
   .flagship-card { grid-template-columns: 1fr; gap: 2.5rem; }
   .building-band { grid-template-columns: 1fr; gap: 2.5rem; padding: 2.5rem; }
-  .building-product { padding-left: 0; border-left: none; padding-top: 2rem; border-top: 1px solid var(--border-color); }
+  .building-products { padding-left: 0; border-left: none; padding-top: 2rem; border-top: 1px solid var(--border-color); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
