@@ -90,7 +90,7 @@
     </script>
 </head>
 <body>
-  <div class="cursor-dot" aria-hidden="true"></div>
+
   <div class="cursor-glow" aria-hidden="true"></div>
 
   <a href="#main" class="skip-link">Skip to content</a>
@@ -98,7 +98,7 @@
   <header class="main-header">
     <div class="container">
       <a href="/" class="logo" aria-label="Home — Saifullah Siddiqui">Saifullah Siddiqui</a>
-      <nav class="main-nav" aria-label="Primary">
+      <nav class="main-nav" id="primary-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#building">Building</a>
@@ -108,6 +108,9 @@
         <a href="https://github.com/siddiqui-saifullah" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
         <a href="https://www.linkedin.com/in/siddiqui-saifullah" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
       </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -245,6 +248,17 @@
               <i data-feather="arrow-right" aria-hidden="true"></i>
             </a>
           </li>
+
+          <li class="project-item" data-image="./assets/images/project-weather.webp">
+            <div class="project-content">
+              <h3><a href="/projects/weather-now" class="project-title-link">Weather Now</a></h3>
+              <p>React single-page app with auto-geolocation and chained geocoding + weather API requests, built on Vite and Material UI.</p>
+            </div>
+            <a href="/projects/weather-now" class="project-case-study" aria-label="Read the Weather Now case study">
+              <span>Case Study</span>
+              <i data-feather="arrow-right" aria-hidden="true"></i>
+            </a>
+          </li>
         </ul>
 
         <div class="view-all-projects">
@@ -294,7 +308,7 @@
           <img src="./assets/images/saifullahsiddiqui.webp"
                alt="Saifullah Siddiqui" width="120" height="120" loading="lazy">
           <div>
-            <p>I'm Saifullah Siddiqui, a full-stack developer focused on building practical web applications, backend systems, real-time features and AI-powered tools. I work primarily with the JavaScript / MERN ecosystem and use Java for DSA and problem solving.</p>
+            <p>I'm Saifullah Siddiqui, a full-stack developer focused on building practical web applications, backend systems, real-time features and AI-powered tools. I work primarily with TypeScript and the MERN stack, and use Java for DSA and problem solving.</p>
             <p>I created <a href="#aivex">Aivex</a> and I'm currently building <a href="#building">Grawity</a> — GIMS, Grawity Classroom and the shared identity layer that connects them.</p>
             <p><a href="/about" class="text-link">Read the full profile →</a></p>
           </div>
@@ -311,6 +325,10 @@
           <a href="mailto:saifullahshasiddiqui@gmail.com" class="btn btn-primary">Email Me</a>
           <a href="https://www.linkedin.com/in/siddiqui-saifullah" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
         </div>
+        <p class="contact-email">
+          <span>saifullahshasiddiqui@gmail.com</span>
+          <button type="button" class="copy-btn" data-copy="saifullahshasiddiqui@gmail.com" aria-label="Copy email address">Copy</button>
+        </p>
       </div>
     </section>
   </main>

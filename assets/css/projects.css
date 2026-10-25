@@ -25,7 +25,6 @@ body {
     background-color: var(--bg-color);
     color: var(--primary-text);
     font-family: 'Inter', sans-serif;
-    cursor: none;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
@@ -147,15 +146,14 @@ body {
 }
 
 /* --- Custom Cursor (from main theme) --- */
-.cursor-dot, .cursor-glow {
+.cursor-glow {
     position: fixed; top: 0; left: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%; pointer-events: none; z-index: 9999;
     transition: transform 0.2s ease-out, opacity 0.3s ease;
 }
-.cursor-dot { width: 8px; height: 8px; background-color: var(--accent-color); }
 .cursor-glow { width: 40px; height: 40px; background-image: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%); }
-.cursor-dot.hidden, .cursor-glow.hidden { opacity: 0; }
+.cursor-glow.hidden { opacity: 0; }
 
 /* --- Projects Page Specific Styles --- */
 .page-hero {
@@ -326,9 +324,6 @@ main.container {
 }
 .main-nav a:hover { color: var(--primary-text); }
 
-@media (max-width: 820px) {
-    .main-nav { display: none; }
-}
 
 /* --- Breadcrumb --- */
 .breadcrumb {
@@ -424,3 +419,83 @@ main.container {
 .ecosystem-callout h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
 .ecosystem-callout p { color: var(--secondary-text); max-width: 60ch; }
 .ecosystem-callout-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+/* --- Mobile menu & pointer effects --- */
+.nav-toggle {
+    display: none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    margin-left: 0.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 99px;
+    background: transparent;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+.nav-toggle span {
+    position: absolute;
+    left: 50%;
+    width: 18px;
+    height: 1.5px;
+    background: currentColor;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: transform 0.25s ease, top 0.25s ease;
+}
+.nav-toggle span:first-child { top: 17px; }
+.nav-toggle span:last-child { top: 25px; }
+.main-header.nav-open .nav-toggle span:first-child { top: 21px; transform: translateX(-50%) rotate(45deg); }
+.main-header.nav-open .nav-toggle span:last-child { top: 21px; transform: translateX(-50%) rotate(-45deg); }
+
+.main-nav a[aria-current],
+.main-nav a.is-active { color: var(--primary-text); }
+
+@media (max-width: 820px) {
+    .nav-toggle { display: inline-block; }
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0.5rem 2rem 1.25rem;
+        background: var(--bg-color);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+    .main-nav a {
+        padding: 0.9rem 0;
+        font-size: 1.05rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .main-nav a:last-child { border-bottom: none; }
+    .main-header.nav-open {
+        background-color: var(--bg-color);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom-color: var(--border-color);
+    }
+    .main-header.nav-open .main-nav {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
+
+/* The glow follows a mouse only; touch screens and reduced motion skip it */
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+    .cursor-glow { display: none; }
+}
+
+@media (max-width: 480px) {
+    .main-header .contact-btn { display: none; }
+}

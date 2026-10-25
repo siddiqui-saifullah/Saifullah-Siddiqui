@@ -62,7 +62,7 @@
     </script>
 </head>
 <body>
-    <div class="cursor-dot" aria-hidden="true"></div>
+
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <a href="#main" class="skip-link">Skip to content</a>
@@ -70,13 +70,16 @@
     <header class="main-header">
         <div class="header-content">
             <a href="/" class="logo">Saifullah Siddiqui</a>
-            <nav class="main-nav" aria-label="Primary">
-                <a href="/#about">About</a>
+            <nav class="main-nav" id="primary-nav" aria-label="Primary">
+                <a href="/about">About</a>
                 <a href="/projects">Work</a>
                 <a href="/#building">Building</a>
                 <a href="/#contact">Contact</a>
             </nav>
             <a href="/#contact" class="contact-btn">Get in Touch</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+                <span></span><span></span>
+            </button>
         </div>
     </header>
 
