@@ -4,52 +4,77 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.main-header');
     // Check if header exists on the page before adding scroll listener
     if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+        const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 50);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
     }
 
-    // --- 2. CUSTOM CURSOR LOGIC ---
-    const cursorDot = document.querySelector('.cursor-dot');
+    // --- 2. MOBILE MENU ---
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+
+    if (header && navToggle && nav) {
+        const setOpen = open => {
+            header.classList.toggle('nav-open', open);
+            navToggle.setAttribute('aria-expanded', String(open));
+            navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+
+        navToggle.addEventListener('click', () => setOpen(!header.classList.contains('nav-open')));
+        nav.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && header.classList.contains('nav-open')) {
+                setOpen(false);
+                navToggle.focus();
+            }
+        });
+        document.addEventListener('click', e => {
+            if (!header.contains(e.target)) setOpen(false);
+        });
+        // Leaving the mobile layout (toggle hidden) with the menu open would strand it open
+        window.addEventListener('resize', () => {
+            if (getComputedStyle(navToggle).display === 'none') setOpen(false);
+        }, { passive: true });
+    }
+
+    // --- 3. HIGHLIGHT THE SECTION IN VIEW (homepage) ---
+    const sectionLinks = nav ? [...nav.querySelectorAll('a[href^="#"]')] : [];
+
+    if (sectionLinks.length && 'IntersectionObserver' in window) {
+        const linkFor = new Map();
+        sectionLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute('href'));
+            if (section) linkFor.set(section, link);
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                sectionLinks.forEach(l => l.classList.remove('is-active'));
+                linkFor.get(entry.target).classList.add('is-active');
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+
+        linkFor.forEach((_, section) => observer.observe(section));
+    }
+
+    // --- 4. POINTER GLOW ---
     const cursorGlow = document.querySelector('.cursor-glow');
 
-    // Check if cursor elements exist
-    if (cursorDot && cursorGlow) {
+    if (cursorGlow && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
         window.addEventListener('mousemove', e => {
-            const posX = e.clientX;
-            const posY = e.clientY;
+            cursorGlow.style.left = `${e.clientX}px`;
+            cursorGlow.style.top = `${e.clientY}px`;
+        }, { passive: true });
 
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-            
-            cursorGlow.style.left = `${posX}px`;
-            cursorGlow.style.top = `${posY}px`;
+        // Fade the glow over links and buttons so it doesn't compete with their hover states
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => cursorGlow.classList.add('hidden'));
+            el.addEventListener('mouseleave', () => cursorGlow.classList.remove('hidden'));
         });
     }
 
-    // --- 3. CURSOR HIDE/SHOW ON INTERACTIVE ELEMENTS ---
-    const interactiveElements = document.querySelectorAll('a, button, .contact-btn');
-
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            if (cursorDot && cursorGlow) {
-                cursorDot.classList.add('hidden');
-                cursorGlow.classList.add('hidden');
-            }
-        });
-        el.addEventListener('mouseleave', () => {
-            if (cursorDot && cursorGlow) {
-                cursorDot.classList.remove('hidden');
-                cursorGlow.classList.remove('hidden');
-            }
-        });
-    });
-
-    // --- 4. PROJECT PREVIEW HOVER EFFECT (for homepage) ---
+    // --- 5. PROJECT PREVIEW HOVER EFFECT (for homepage) ---
     const projectItems = document.querySelectorAll('.project-item');
     const projectPreview = document.querySelector('.project-preview');
 
@@ -60,11 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         projectItems.forEach(item => {
             const previewImage = item.dataset.image;
+            if (!previewImage) return;
 
             item.addEventListener('mousemove', e => {
                 projectPreview.src = previewImage;
                 projectPreview.classList.add('visible');
-                
+
                 projectPreview.style.left = `${e.clientX}px`;
                 projectPreview.style.top = `${e.clientY}px`;
             });
@@ -75,10 +101,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. INITIALIZE FEATHER ICONS ---
+    // --- 6. COPY EMAIL ---
+    document.querySelectorAll('[data-copy]').forEach(button => {
+        const label = button.textContent;
+        button.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(button.dataset.copy);
+                button.textContent = 'Copied';
+            } catch {
+                button.textContent = 'Copy failed';
+            }
+            setTimeout(() => { button.textContent = label; }, 2000);
+        });
+    });
+
+    // --- 7. INITIALIZE FEATHER ICONS ---
     // This will find all data-feather attributes and replace them with SVG icons
     if (typeof feather !== 'undefined') {
         feather.replace();
     }
 });
-

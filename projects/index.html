@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Projects | Saifullah Siddiqui</title>
-    <meta name="description" content="Selected full-stack, AI and web engineering projects by Saifullah Siddiqui, including Aivex, Ventara, Weather Now and University Finder.">
+    <meta name="description" content="Selected full-stack, AI and web engineering projects by Saifullah Siddiqui, including Aivex, Ventara, Micro-Marketplace, Weather Now and University Finder.">
     <link rel="canonical" href="https://saifullahsiddiqui.com/projects">
     <meta name="author" content="Saifullah Siddiqui">
 
@@ -16,6 +16,13 @@
     <meta property="og:url" content="https://saifullahsiddiqui.com/projects">
     <meta property="og:site_name" content="Saifullah Siddiqui">
     <meta name="theme-color" content="#050505">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@iamsiddiquisaif">
+    <meta name="twitter:title" content="Projects | Saifullah Siddiqui">
+    <meta name="twitter:description" content="Selected full-stack, AI and web engineering projects by Saifullah Siddiqui.">
+    <meta name="twitter:image" content="https://saifullahsiddiqui.com/og-image-info.jpg">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -23,7 +30,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js" defer></script>
     <link rel="stylesheet" href="../assets/css/projects.css">
 
     <script type="application/ld+json">
@@ -34,7 +41,21 @@
           "@type": "CollectionPage",
           "name": "Projects | Saifullah Siddiqui",
           "url": "https://saifullahsiddiqui.com/projects",
-          "about": { "@id": "https://saifullahsiddiqui.com/#person" }
+          "about": { "@id": "https://saifullahsiddiqui.com/#person" },
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Aivex", "url": "https://saifullahsiddiqui.com/projects/aivex" },
+              { "@type": "ListItem", "position": 2, "name": "Ventara", "url": "https://saifullahsiddiqui.com/projects/ventara" },
+              { "@type": "ListItem", "position": 3, "name": "Micro-Marketplace", "url": "https://github.com/siddiqui-saifullah/Micro-Marketplace" },
+              { "@type": "ListItem", "position": 4, "name": "Weather Now", "url": "https://saifullahsiddiqui.com/projects/weather-now" },
+              { "@type": "ListItem", "position": 5, "name": "University Finder", "url": "https://saifullahsiddiqui.com/projects/university-finder" },
+              { "@type": "ListItem", "position": 6, "name": "Instagram Profile Viewer", "url": "https://saifullahsiddiqui.com/projects/instagram-profile-viewer" },
+              { "@type": "ListItem", "position": 7, "name": "Simon Says", "url": "https://saifullahsiddiqui.com/projects/symon-say-game" },
+              { "@type": "ListItem", "position": 8, "name": "Tic-Tac-Toe", "url": "https://saifullahsiddiqui.com/projects/tic-tac-toe" },
+              { "@type": "ListItem", "position": 9, "name": "Spotify Clone", "url": "https://saifullahsiddiqui.com/projects/spotify-clone" }
+            ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -48,7 +69,7 @@
     </script>
 </head>
 <body>
-    <div class="cursor-dot" aria-hidden="true"></div>
+
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <a href="#main" class="skip-link">Skip to content</a>
@@ -56,13 +77,16 @@
     <header class="main-header">
         <div class="container">
             <a href="/" class="logo">Saifullah Siddiqui</a>
-            <nav class="main-nav" aria-label="Primary">
-                <a href="/#about">About</a>
-                <a href="/projects">Work</a>
+            <nav class="main-nav" id="primary-nav" aria-label="Primary">
+                <a href="/about">About</a>
+                <a href="/projects" aria-current="page">Work</a>
                 <a href="/#building">Building</a>
                 <a href="/#contact">Contact</a>
             </nav>
             <a href="/#contact" class="contact-btn">Get in Touch</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+                <span></span><span></span>
+            </button>
         </div>
     </header>
 
@@ -107,6 +131,21 @@
                         <a href="/projects/ventara" class="btn btn-primary"><i data-feather="file-text"></i> Case Study</a>
                         <a href="https://ventara-5wuv.onrender.com" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="external-link"></i> Live</a>
                         <a href="https://github.com/siddiqui-saifullah/Ventara" class="btn btn-secondary" target="_blank" rel="noopener"><i data-feather="github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-visual-placeholder" aria-hidden="true">
+                    <span>Micro&#8209;Marketplace</span>
+                    <small>REST API · React client</small>
+                </div>
+                <div class="card-content">
+                    <h3>Micro-Marketplace</h3>
+                    <p>Marketplace with a modular Express 5 REST API — JWT auth with bcrypt, product CRUD with Multer image uploads, paginated listings and per-user favorites — and a React 19 + Vite client.</p>
+                    <p class="card-stack">React • Vite • Node.js • Express • MongoDB • JWT • Multer</p>
+                    <div class="card-buttons">
+                        <a href="https://github.com/siddiqui-saifullah/Micro-Marketplace" class="btn btn-primary" target="_blank" rel="noopener"><i data-feather="github"></i> Code</a>
                     </div>
                 </div>
             </div>
@@ -202,12 +241,13 @@
 
         <aside class="ecosystem-callout">
             <div>
-                <h2>Building: the Grawity ecosystem</h2>
-                <p>Alongside portfolio projects, I'm building <strong>Grawity</strong>, an education-technology initiative, with <strong>GIMS</strong> (Grawity Institute Management System) as a live product. These are separate properties.</p>
+                <h2>Building: the Grawity platform</h2>
+                <p>Alongside these projects, I'm building <strong>Grawity</strong> — multi-tenant software for education institutes in TypeScript, React, Node.js and MongoDB. It includes <strong>GIMS</strong> (institute management, live), <strong>Grawity Classroom</strong> (courses, assessments and progress, live) and <strong>Grawity ID</strong> (single sign-on across products). These are separate properties.</p>
             </div>
             <div class="ecosystem-callout-links">
                 <a href="https://www.grawity.in/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Grawity</a>
                 <a href="https://gims.grawity.in/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> GIMS</a>
+                <a href="https://classroom.grawity.in/" target="_blank" rel="noopener" class="btn btn-secondary"><i data-feather="external-link"></i> Classroom</a>
             </div>
         </aside>
     </main>
